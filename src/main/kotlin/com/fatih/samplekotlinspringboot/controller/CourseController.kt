@@ -19,19 +19,19 @@ class CourseController(val courseService: CourseService) {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     fun addCourse(@RequestBody courseDto: CourseDto): CourseDto {
-        return courseService.addCourse()
+        return courseService.addCourse(courseDto)
     }
 
     @PutMapping("/{courseId}")
     @ResponseStatus(HttpStatus.OK)
     fun updateCourse(@RequestBody courseDto: CourseDto,
                       @PathVariable courseId: Long): CourseDto {
-        return courseService.updateCource()
+        return courseService.updateCourse(courseDto, courseId)
     }
 
     @DeleteMapping("/{courseId}")
     fun deleteCourse(@PathVariable courseId: Long): Unit {
-        return courseService.deleteCource()
+        return courseService.deleteCourse(courseId)
     }
 
 }

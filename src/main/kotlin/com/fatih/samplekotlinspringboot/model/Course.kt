@@ -9,12 +9,11 @@ open class Course(
     @GeneratedValue(strategy = GenerationType.AUTO)
     val id : Long?,
 
-    val name: String,
+    var name: String,
 
     @ManyToOne()
     @JoinColumn(name = "instructor_id")
-    val instructor: Instructor
+    var instructor: Instructor
     )
 {
-
 }

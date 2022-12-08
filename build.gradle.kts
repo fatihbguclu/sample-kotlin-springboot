@@ -28,7 +28,7 @@ dependencies {
 
     // Logging
     // https://mvnrepository.com/artifact/io.github.microutils/kotlin-logging-jvm
-    runtimeOnly("io.github.microutils:kotlin-logging-jvm:2.1.23")
+    implementation("io.github.microutils:kotlin-logging-jvm:2.1.23")
 }
 
 tasks.withType<KotlinCompile> {
