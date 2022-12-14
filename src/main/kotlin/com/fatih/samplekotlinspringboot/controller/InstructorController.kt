@@ -16,8 +16,8 @@ class InstructorController(val instructorService: InstructorService) {
 
     @PostMapping()
     @ResponseStatus(HttpStatus.OK)
-    fun addInstructor(): InstructorDto {
-        return instructorService.addInstructor()
+    fun addInstructor(@RequestBody instructorDto: InstructorDto): InstructorDto {
+        return instructorService.addInstructor(instructorDto)
     }
 
 }
